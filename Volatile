@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+volatile int dataReady = 0;
+
+void UART_ISR(void)
+{
+    dataReady = 1;      // Interrupt updates flag
+}
+
+int main()
+{
+    while(dataReady == 0)
+    {
+        // Wait for UART data
+    }
+
+    printf("Data Received\n");
+
+    return 0;
+}
