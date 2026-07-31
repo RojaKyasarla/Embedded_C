@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int num = 10;   // 1010
+
+    num |= (1 << 2);         // Set bit
+    printf("Set = %u\n", num);
+
+    num &= ~(1 << 3);        // Clear bit
+    printf("Clear = %u\n", num);
+
+    num ^= (1 << 1);         // Toggle bit
+    printf("Toggle = %u\n", num);
+
+    if(num & (1 << 2))
+        printf("Bit is SET\n");
+    else
+        printf("Bit is CLEAR");
+
+    return 0;
+}
