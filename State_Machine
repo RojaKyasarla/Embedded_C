@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+typedef enum
+{
+    IDLE,
+    START,
+    STOP
+} State;
+
+int main()
+{
+    State state = IDLE;
+
+    switch(state)
+    {
+        case IDLE:
+            printf("Idle");
+            break;
+
+        case START:
+            printf("Start");
+            break;
+
+        case STOP:
+            printf("Stop");
+            break;
+    }
+
+    return 0;
+}
