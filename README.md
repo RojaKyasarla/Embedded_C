@@ -26,6 +26,7 @@ IoT Weather Station
 Medical devices
 Industrial automation controllers
 Block Diagram
+
           +-----------------------+
           |      Sensors          |
           +----------+------------+
@@ -42,13 +43,16 @@ Block Diagram
         |            |             |
         v            v             v
       LED         Bluetooth      Sensors
-Why Embedded C Instead of Standard C?
-Standard C	Embedded C
+      
+**Why Embedded C Instead of Standard C?**
+
+Standard C	          Embedded C
 General-purpose programming	Firmware development
-Runs on PC	Runs on MCU/MPU
+Runs on PC	          Runs on MCU/MPU
 Limited hardware access	Direct hardware access
-OS often available	Often bare-metal or RTOS
-Uses standard I/O	Uses peripherals like UART, GPIO, ADC
+OS often available	          Often bare-metal or RTOS
+Uses standard I/O	          Uses peripherals like UART, GPIO, ADC
+
 Features of Embedded C
 Hardware register programming
 Bit manipulation
@@ -58,6 +62,7 @@ Deterministic execution
 Peripheral interfacing
 Real-time operation
 Cross-compilation
+
 Embedded System Architecture
           Application Layer
                  |
@@ -68,7 +73,8 @@ Embedded System Architecture
       Registers / Peripheral Drivers
                  |
          Microcontroller Hardware
-Typical Embedded C Project Structure
+         
+**Typical Embedded C Project Structure**
 Project
 │
 ├── main.c
@@ -82,6 +88,7 @@ Project
 ├── startup.s
 ├── linker.ld
 └── Makefile
+
 Memory Organization
 High Address
 --------------------
@@ -271,12 +278,14 @@ System Initialization
 Initialize .data and .bss
      |
 main()
-RTOS vs Bare Metal
-Bare Metal	RTOS
+
+**RTOS vs Bare Metal**
+Bare Metal	          RTOS
 Single execution flow	Multiple tasks
-No scheduler	Scheduler manages tasks
-Simpler	Better for complex applications
-Common Embedded C Interview Concepts
+No scheduler	          Scheduler manages tasks
+Simpler	                    Better for complex applications
+
+**Common Embedded C Interview Concepts**
 Pointers and pointer arithmetic
 Arrays and strings
 Structures, unions, and bit-fields
