@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+#define LED (1 << 5)
+
+int main()
+{
+    unsigned int GPIO = 0;
+
+    while(1)
+    {
+        GPIO ^= LED;      // Toggle LED
+        printf("GPIO = %u\n", GPIO);
+
+        // delay();
+    }
+
+    return 0;
+}
