@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void add()
+{
+    printf("Addition");
+}
+
+int main()
+{
+    void (*fp)();
+
+    fp = add;
+
+    fp();
+
+    return 0;
+}
